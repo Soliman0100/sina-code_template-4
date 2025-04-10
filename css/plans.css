@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+ --pad-t-l:1em 1.5em;
+ --BackG-a:#0075ff;
+ --backG-blue-l:rgb(0 117 255 / 20%);
+ --backG-blue:rgb(0 117 255);
+ --backG-yello-l:rgb(253 236 206);
+ --backG-yello:rgb(245 158 11);
+ --backG-green-l:rgb(34 197 94 / 20%);
+ --backG-green:rgb(34 196 93);
+ 
+}
+.dach-content>.plans-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(450px , 1fr));
+    gap: 20px;
+}
+@media (max-width:550px) {
+    .dach-content>.plans-content{
+       
+        grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+       
+    }
+}
+.dach-content>.plans-content .box{
+    padding: 15px;
+    border-radius: 0;
+}
+.dach-content>.plans-content .box .head{
+    text-align: center;
+    padding: .5em 2.5em;
+    border: 5px solid white;
+}
+.dach-content .bg-g .head{
+    background-color: var(--backG-green);
+    outline: 5px solid var(--backG-green);
+}
+.dach-content .bg-b .head{
+    background-color: var(--backG-blue);
+    outline: 5px solid var(--backG-blue);
+}
+.dach-content .bg-y .head{
+    background-color: var(--backG-yello);
+    outline: 5px solid var(--backG-yello);
+}
+.dach-content>.plans-content .box h3{
+    color: white;
+}
+.dach-content>.plans-content .box h4{
+    color: white;
+    font-size: 3rem;
+    font-weight: normal;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+.dach-content>.plans-content .box h4::before{
+    position: absolute;
+    content: "$";
+    left: -40px;
+    top: -10px;
+    font-size: 30px;
+}
+.dach-content>.plans-content .box ul{
+    margin: 20px 0;
+}
+.dach-content>.plans-content .box ul li{
+    display: flex
+;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    align-items: center;
+}
+.dach-content>.plans-content .box ul .no-border{
+    border: none;
+}
+.dach-content>.plans-content .box ul li i{
+    font-size: 20px;
+}
+.dach-content>.plans-content .box ul li .fa-check{
+    margin-right: 10px;
+    color: var(--backG-green);
+}
+.dach-content>.plans-content .box ul li .fa-xmark{
+    margin-right: 10px;
+    color: red;
+}
+.dach-content>.plans-content .box ul li .fa-info{
+    margin-left: auto;
+    color: #777;
+}
+.dach-content>.plans-content .bg-g a{
+    padding: 7px 8px;
+    color: white;
+    background-color: var(--backG-green);
+    border-radius: 5px;
+}
+.dach-content>.plans-content .bg-b a{
+    padding: 5px 8px;
+    color: white;
+    background-color: var(--backG-blue);
+    border-radius: 5px;
+}
+.dach-content>.plans-content .box>p{
+    text-align: center;
+    color: #777;
+}

@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+ --pad-t-l:1em 1.5em;
+ --BackG-a:#0075ff;
+ --backG-blue-l:rgb(0 117 255 / 20%);
+ --backG-blue:rgb(0 117 255);
+ --backG-yello-l:rgb(253 236 206);
+ --backG-yello:rgb(245 158 11);
+ --backG-green-l:rgb(34 197 94 / 20%);
+ --backG-green:rgb(34 196 93);
+ 
+}
+
+/* .dach-content>.files-content {
+    display: flex;
+  justify-content: space-between;
+} */
+@media (max-width:767px) {        
+    .dach-content>.files-content{
+        flex-direction: column;
+    }
+}
+.files-content>.files-boxes{
+    width: calc(100% - 250px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    gap: 20px;
+}
+@media (max-width:767px) {        
+    .files-content>.files-boxes{
+      width: 100%;
+        display: grid;
+    }
+}
+.files-content>.files-boxes .box-file{
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+}
+.files-content>.files-boxes .box-file:hover img{
+    transform: rotate(10deg);
+}
+.files-content>.files-boxes .box-file i{
+    display: block;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #777;
+}
+.files-content>.files-boxes .box-file img{
+    width: 80px;
+    margin: 10px 0;
+    transition: .4s;
+}
+.files-content>.files-boxes .box-file .last{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+.files-content>.files-boxes .box-file p{
+    color: #777;
+    
+}
+.files-content .files-statistics{
+    width: 250px;
+    height: fit-content;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+@media (max-width:767px) {
+    .files-content .files-statistics{
+        width: 100%;
+    }
+    
+}
+.files-content .files-statistics .box-statistics{
+    display: flex
+    ;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        padding: 10px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+}
+.files-content .files-statistics .box-statistics .info h5{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.files-content .files-statistics .box-statistics .left{
+    display: flex;
+    align-items: center;
+}
+.files-content .files-statistics .box-statistics .left i{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.bg-i-b i{
+background-color: var(--backG-blue-l);
+color: var(--backG-blue);
+}
+.bg-i-g i{
+    background-color: var(--backG-green-l);
+    color: var(--backG-green);
+}
+.bg-i-r i{
+    background-color: rgb(244 67 54 / 20%);
+    color: rgb(244 67 54);
+}
+.bg-i-y i{
+    background-color: var(--backG-yello-l);
+    color: var(--backG-yello);
+}
+.files-content .files-statistics .box-statistics  p{
+    color: #777;
+}
+.files-content .files-statistics a{
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    padding: 8px 10px;
+    background-color: var(--BackG-a);
+    border-radius: 5px;
+    color: white;
+    transition: .5s;
+}
+
+.files-content .files-statistics a:hover{
+   background-color: #0077ffc4;
+}
+.files-content .files-statistics a:hover i{
+    animation: go-up 0.8s infinite alternate-reverse;
+}
+@keyframes  go-up {
+    100%{
+        transform: translateY(-5px);
+    }
+}
+.files-content .files-statistics a i{
+    font-size: 15px;
+    color: white;
+}

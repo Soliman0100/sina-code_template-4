@@ -1,0 +1,235 @@
+/*  */
+:root{
+    --pad-t-l:1em 1.5em;
+    --BackG-a:#0075ff;
+    --backG-blue-l:rgb(0 117 255 / 20%);
+    --backG-blue:rgb(0 117 255);
+    --backG-yello-l:rgb(253 236 206);
+    --backG-yello:rgb(245 158 11);
+    --backG-green-l:rgb(34 197 94 / 20%);
+    --backG-green:rgb(34 196 93);
+    
+   }
+   .profile-content{
+    display: block;
+   }
+   /* ------------------- */
+.skill-active{
+   
+}
+.box{
+   margin: 20px 0;
+    text-transform: capitalize;
+}
+/* Start profile-user */
+.profile-user{
+    display: flex
+    ;
+        align-items: center;
+        padding: 0 20px;
+}
+
+.user{
+    padding:1.5em;
+    text-align: center;
+    text-transform: capitalize;
+    border-right: 1px solid #eee;
+}
+.user img{
+width: 150px;
+}
+.user h3{}
+.user p{
+    color: #777;
+}
+.user span{
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #eee;
+    display: block;
+    position: relative;
+    margin: 20px 0;
+}
+.user span::before{
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--backG-blue);
+    border-radius: 50px;
+}
+.user .stars{
+    display: flex;
+}
+.user .stars li{
+    margin: 0 3px;
+}
+.user .stars li i{
+    font-size: 20px ;
+    color: var(--backG-yello);
+    margin-bottom: 20px;
+}
+.user h5{
+    color: #777;
+}
+.user-data{
+    width: 100%;
+}
+.user-data .box-data{
+    padding: 30px 0;
+    padding-left: 20px;
+    border-bottom: 1px solid #eee;
+
+   
+}
+.user-data .box-data .info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.user-data .box-data h4{
+    color: #888;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.user-data .box-data p{
+    font-weight: 400;
+    color: #777;
+}
+.user-data .box-data p span{
+    color: black;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.user-data .box-data label{
+    margin-top: 15px;
+}
+@media (max-width:767px) {
+    .profile-user{
+        flex-direction: column;
+        text-align: center;
+    }
+    .user{
+        border: none;
+    }
+    .user-data .box-data .info{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .user-data .box-data .info p{
+        margin: 10px 0;
+    }
+}
+
+/* End profile-user */
+/* Start skill */
+
+.skills{
+    padding: var(--pad-t-l);
+}
+.skills h5{
+    font-size: 1.75rem;
+    text-transform: capitalize;
+}
+.skills h6{
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+color: #777;
+}
+.skills .info{
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.skills .info p{
+    padding: 5px 8px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 20px 10px;
+}
+.skills .info p:first-child{
+    margin-left:0;
+}
+@media (max-width:767px) {
+    .skills .info{
+        justify-content: center;
+        text-align: center;
+    }
+    .skills .info p{
+        margin:  20px 5px;
+    }
+}
+/* end skill */
+/* Start  activities*/
+.activities{
+    padding: var(--pad-t-l);
+}
+.activities>h5{
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+.activities h6{
+    font-size: 15px;
+    font-weight: 500;
+color: #777;
+}
+.activities .info{
+    margin: 20px 0;
+    display: flex
+;
+    align-items: center;
+    justify-content: space-between;
+}
+.activities .info .img-t{
+    display: flex
+;
+    align-items: center;
+}
+.activities .info .img-t img{
+    width: 60px;
+    margin-right: 10px;
+}
+.activities .info .img-t .title{}
+.activities .info .img-t .title h4{
+    font-weight: normal;
+    color: black;
+}
+.activities .info .img-t .title h5{
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #777;
+}
+.activities .info .time p{
+    text-align: center;
+    font-weight: 600;
+}
+.activities .info .time p span{
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #777;
+}
+@media (max-width:767px) {
+
+    .activities .info{
+        flex-direction: column;
+        padding: 15px ;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+   
+    .activities .info .img-t{
+        flex-direction: column;
+    }
+    .activities .info .img-t img{
+        margin-right: 0;
+    }
+}
+/* end  activities*/

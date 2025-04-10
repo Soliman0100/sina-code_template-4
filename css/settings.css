@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root{
+    --eee-color:#eee;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f5f9;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+*{
+       margin: 0; 
+        padding: 0;
+box-sizing: border-box;
+}
+/* ----------------------------------------------------------------------------- */
+.dach-content{}
+.dach-content .setting-content{
+    display:grid;
+    grid-template-columns: repeat(auto-fit , minmax(500px , 1fr));
+    gap: 20px;
+}
+@media (max-width:767px) {
+    .dach-content .content{
+        grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    }
+}
+.box-s{
+    padding: 1em 1.5em;
+    background-color: white;
+    border-radius: 10px;
+}
+.box-s h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.box-s h4{
+font-weight: 400;
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+/* site */
+.site .d-f-check{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.site .title h5{
+    font-size: 20px;
+    font-weight: 500;
+}
+.site .title h6{
+    font-size: 15px;
+    font-weight: 500;
+    color: #777;
+    margin-top: 5px;
+}
+.toggle-checkbox{
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+ .toggle-switch{
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.toggle-switch::before{
+    position: absolute;
+    font-family: 'Font Awesome 6 Free'; 
+    font-weight: 900; 
+    content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  transition: 0.3s;
+}
+ .toggle-checkbox:checked + .toggle-switch {
+    background-color: #0075ff;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    content: "\f00c";
+    left: 50px;
+    color: #0075ff;
+  }
+  textarea{
+    outline: 0;
+    border: 1px solid #7777;
+    resize: none;
+    width: 100%;
+    min-height: 150px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  /* genral */
+  .genral >div{
+    margin: 25px 0;
+  }
+  .genral label{
+    text-transform: capitalize;
+    color: #777;
+  }
+  .genral input{
+    display: block;
+    outline: 0;
+    border: 1px solid #eee;
+    padding: 7px 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  .genral input[type="email"]{
+    cursor: no-drop;
+  }
+  .genral .l-change{
+    width: fit-content;
+    margin-left: auto;
+  }
+  .genral .l-change a{
+    color: #0075ff;
+    font-weight: 600;
+  }
+  /* security */
+.security .info{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+}
+.security .info .title{}
+.security .info .title p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.security .info .title  span{
+    font-size: 14px;
+    color: #777;
+}
+.security .info a{
+    padding: 5px 7px;
+border-radius: 5px;
+font-weight: 500;
+text-transform: capitalize;
+}
+/* social */
+.social{}
+.social .i-input{
+    display: flex
+;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-direction: row-reverse;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.social i{
+    padding: 15px;
+    background-color: #eee;
+    color: #777;
+    transition: .3s;
+    width: 50px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.social input{
+    width: calc(100% - 50px);
+    outline: 0;
+    padding: calc(15px - .8px);
+    border: 0;
+}
+.social input:focus +i{
+    color: black;
+}
+/* widgets */
+.widgets{}
+.widgets .inp-check{
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+.widgets .inp-check label{
+    font-size: 20px;
+  
+    cursor: pointer;
+    position: relative;
+}
+.widgets .inp-check label::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    transition: .3s;
+}
+.widgets .inp-check label:hover::before{
+    border-color: #0075ff;
+}
+.widgets .inp-check label::after{
+    position: absolute;
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    top: 6px;
+    /* transform: translateY(-50%); */
+    left: -24px;
+    font-size: 11px;
+    width: 17px;
+    height: 17px;
+    background-color: #0075ff;
+    display: flex
+;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    transform: scale(0) rotate(0deg) translateY(-50%);
+    transition: .3s;
+}
+.widgets input[type="checkbox"]:checked + label::after {
+    transform: scale(1) rotate(360deg);
+}
+
+.widgets .inp-check input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+/* Backup  */
+.backup .date{
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #7777;
+}
+.backup .date-box{
+    margin-bottom: 20px;
+    padding-left: 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.backup .date-box label{
+    position: relative;
+    cursor: pointer;
+}
+
+.backup .date-box label::before{
+    content: "";
+    position: absolute;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.backup .date-box label::after{
+    content: "";
+    position: absolute;
+    left: -35px;
+    width: 0;
+    height: 0;
+    background-color: #0075ff;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: .3s;
+}
+.backup .date-box input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.backup .date-box  input[type="radio"]:focus + label:after{
+    width: 14px;
+    height: 14px;
+}
+.backup .server{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.backup .server .box-server{
+    padding: 10px 30px;
+    border: 1px solid #ddd;
+    max-width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.backup .server .box-server i{
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.backup .server input{
+    -webkit-appearance: none;
+    appearance: none;
+}
+.backup .server .box-server label {
+    cursor: pointer;
+}
+.backup .server  input:focus + .box-server{
+    border-color: #0075ff;
+    color: #0075ff;
+}
+/*
+.site .d-f-check .toggle-switch::before{
+    position: absolute;
+     content: '\f058';
+    font-family: 'Font Awesome 6 Free'; 
+    font-weight: 900; 
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+    transition: .5s;
+}  */

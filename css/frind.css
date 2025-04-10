@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+ --pad-t-l:1em 1.5em;
+ --BackG-a:#0075ff;
+ --backG-blue-l:rgb(0 117 255 / 20%);
+ --backG-blue:rgb(0 117 255);
+ --backG-yello-l:rgb(253 236 206);
+ --backG-yello:rgb(245 158 11);
+ --backG-green-l:rgb(34 197 94 / 20%);
+ --backG-green:rgb(34 196 93);
+ 
+}
+img{
+   width: 20px;
+}
+.dach-content>.frind-content{
+    display: grid;
+    /* grid-template-columns:repeat(auto-fit , minmax(200px , 1fr)); in the html file */
+    gap: 20px;
+}
+
+.frind-content .box{
+   padding: 15px;
+   margin: 10px 0;
+   background-color: white;
+   transition: .3s;
+}
+.frind-content .box:hover{
+    transform: translateY(-10px);
+}
+.frind-content .box .icon{
+    margin-bottom: 10px;
+}
+.frind-content .box .icon i{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #eee;
+    transition: .3s;
+}
+.frind-content .box .icon i:hover{
+    background-color: var(--BackG-a);
+    color: white;
+}
+.frind-content .box .frind-user{}
+.frind-content .box .frind-user img{
+    width: 100px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 50%;
+}
+.frind-content .box .frind-user h5{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+.frind-content .box .frind-user h6{
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #eee;
+}
+.frind-content .box ul li{
+    display: flex
+;
+    margin: 15px 0;
+    align-items: center;
+}
+.frind-content .box ul li i{
+    margin-right: 10px; 
+    text-transform: capitalize;
+}
+.frind-content .box ul li p{}
+.frind-content .box .last{
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+@media (max-width:767px) {
+    .frind-content .box .last{
+        flex-direction: column;
+    }
+    .frind-content .box .last p{
+        margin-bottom: 15px;
+    }
+}
+.frind-content .box .last .links a{
+    padding: 5px 10px;
+    color: white;
+    margin-left:5px;
+    border-radius: 5px;
+}
+.frind-content .box .last .links .profile{
+    background-color: var(--backG-blue);
+}
+.frind-content .box .last .links .remove{
+    background-color: #f44336;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+ --pad-t-l:1em 1.5em;
+ --BackG-a:#0075ff;
+ --backG-blue-l:rgb(0 117 255 / 20%);
+ --backG-blue:rgb(0 117 255);
+ --backG-yello-l:rgb(253 236 206);
+ --backG-yello:rgb(245 158 11);
+ --backG-green-l:rgb(34 197 94 / 20%);
+ --backG-green:rgb(34 196 93);
+ 
+}
+.dach-content>.content-courses{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    gap: 20px;
+}
+@media (max-width:767px) {
+    .dach-content>.content-courses{
+        grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    }
+    
+}
+.dach-content .content-courses .box{
+    padding: 0;
+    position: relative;
+    transition: .3s;
+}
+.dach-content .content-courses .box .pos-abs{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.dach-content .content-courses .box:hover{
+    transform: translateY(-10px);
+    color: #0075ff;
+}
+.dach-content .content-courses .box .img-full{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.dach-content .content-courses .box .title{
+    margin: 20px 0;
+    padding: 0 15px;
+}
+.dach-content .content-courses .box .title h5{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.dach-content .content-courses .box .title h6{
+    font-size: 15px;
+    color: #777;
+    font-weight: 500;
+    max-width: 300px;
+    line-height: 1.8;
+}
+.dach-content .content-courses .box .info{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px 15px;
+    border: 1px solid #eee;
+}
+.dach-content .content-courses .box .info p{
+    color: #777;
+}
+.dach-content .content-courses .box .info p i{
+   margin-right: 5px;
+}
+.dach-content .content-courses .box .info span{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -15px;
+    padding: 5px 10px;
+    background-color: var(--backG-blue);
+    border-radius: 5px;
+    color: white;
+}
